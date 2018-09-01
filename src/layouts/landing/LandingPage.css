@@ -1,0 +1,25 @@
+.headshot {
+    width: 200px;
+}
+
+.exec {
+    
+}
+
+.picrow {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.banner {
+    margin-bottom: -15px;
+}
+
+.centerCol {
+    justify-content: center;
+}
+
+.contact {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
