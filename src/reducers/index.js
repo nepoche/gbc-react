@@ -3,12 +3,12 @@ import { routerReducer } from 'react-router-redux'
 import { drizzleReducers } from 'drizzle'
 import { reducer as formReducer } from 'redux-form'
 
-import LoginReducer from './loginReducer'
+import userReducer from './userReducer';
 
 const reducer = combineReducers({
   routing: routerReducer,
   form: formReducer,
-  login: LoginReducer,
+  user: userReducer,
   ...drizzleReducers
 })
 

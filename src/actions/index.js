@@ -1,4 +1,4 @@
-import { LOGIN_USER, LOGOUT_USER } from '../constants/action-types'
+import { LOGIN_USER, LOGOUT_USER, FB_USER_EXISTS } from '../constants/action-types'
 
 const userLoggedIn = (email) => ({
     type: LOGIN_USER,
@@ -10,4 +10,9 @@ const userLoggedOut = () => ({
     payload: ""
 })
 
-export { userLoggedIn, userLoggedOut }
+const fbUserExists = (user) => ({
+    type: FB_USER_EXISTS,
+    payload: user
+});
+
+export { userLoggedIn, userLoggedOut, fbUserExists }

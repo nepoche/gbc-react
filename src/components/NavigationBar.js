@@ -1,14 +1,24 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, NavItem } from 'react-bootstrap';
+import store from '../store';
 
-import logo from '../../public/images/logo-dark.png';
+import logo from '../../public/images/club-logo-blockchain.png';
+import { auth } from '../firebase';
 
 import './NavigationBar.css';
 
 class NavigationBar extends Component {
 
+    handleLogout = () => {
+        auth.doSignOut();
+        window.location.reload();
+    }
+
     render() {
+
+        const state = store.getState();
+
         return (
                 // <Link className="navbar-brand" to="/"><img className="logo" src={logo} alt="club logo"/></Link>
                 // <Link to="/landing">Home</Link>
@@ -27,18 +37,34 @@ class NavigationBar extends Component {
                         <NavItem eventKey={1}>
                             <Link to="/">Home</Link>
                         </NavItem>
-                        <NavItem eventKey={2}>
-                            <Link to="/club">The Club</Link>
-                        </NavItem>
-                        <NavItem eventKey={3}>
-                            <Link to="/partners">Our Partners</Link>
-                        </NavItem>
-                        <NavItem eventKey={4}>
-                            <Link to="/contact">Contact Us</Link>
-                        </NavItem>
-                        <NavItem eventKey={5}>
-                            <Link to="/login">Login</Link>
-                        </NavItem>
+                        { !state.user && 
+                            <NavItem eventKey={2}>
+                                <Link to="/signup">Sign Up</Link>
+                            </NavItem>
+                        }
+                        { !state.user &&
+                            <NavItem eventKey={3}>
+                                <Link to="/login">Login</Link>
+                            </NavItem>
+                        }
+                        {
+                            state.user &&
+                            <NavItem eventKey={4}>
+                                <Link to="/dashboard">Dashboard</Link>
+                            </NavItem>
+                        }
+                        {
+                            state.user &&
+                            <NavItem eventKey={5}>
+                                <Link to="/account">Account</Link>
+                            </NavItem>
+                        }
+                        {
+                            state.user &&
+                            <NavItem eventKey={6}>
+                                <button style={{marginBottom: "0px"}} onClick={this.handleLogout}>Log out</button>
+                            </NavItem>
+                        }
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

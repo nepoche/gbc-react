@@ -4,7 +4,15 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import './LandingPage.css'
-import RobbieHead from '../../../public/images/headshots/RobbieClose.JPG'
+import RobbieHead from '../../../public/images/headshots/Robbie.jpg'
+import JacobHead from '../../../public/images/headshots/Jacob.jpg'
+import KyleHead from '../../../public/images/headshots/Kyle.jpg'
+import FelipeHead from '../../../public/images/headshots/Felipe.jpg'
+import AndrewHead from '../../../public/images/headshots/Andrew.jpg'
+import MitchellHead from '../../../public/images/headshots/Mitchell.jpg'
+import MariaHead from '../../../public/images/headshots/Maria.jpg'
+import HunterHead from '../../../public/images/headshots/Hunter.jpg'
+import MaddieHead from '../../../public/images/headshots/Maddie.jpg'
 
 const LandingPage = () => (
     <div className="page">
@@ -17,31 +25,36 @@ const LandingPage = () => (
         <div className="exec bg-dark">
             <Grid>
                 <Row className="picrow">
-                    <Col xs={6} md={3}>
+                    <Col xs={4} md={2} mdOffset={2}>
                         <Image src={RobbieHead} className="headshot" circle />
                     </Col>
-                    <Col xs={6} md={3}>
-                        <Image src={RobbieHead} className="headshot" circle />
+                    <Col xs={4} md={2} mdOffset={1}>
+                        <Image src={JacobHead} className="headshot" circle />
                     </Col>
-                    <Col xs={6} md={3}>
-                        <Image src={RobbieHead} className="headshot" circle />
-                    </Col>
-                    <Col xs={6} md={3}>
-                        <Image src={RobbieHead} className="headshot" circle />
+                    <Col xs={4} md={2} mdOffset={1}>
+                        <Image src={KyleHead} className="headshot" circle />
                     </Col>
                 </Row>
                 <Row className="picrow">
-                    <Col xs={6} md={3}>
-                        <Image src={RobbieHead} className="headshot" circle />
+                    <Col xs={4} md={2} mdOffset={2}>
+                        <Image src={FelipeHead} className="headshot" circle />
                     </Col>
-                    <Col xs={6} md={3}>
-                        <Image src={RobbieHead} className="headshot" circle />
+                    <Col xs={4} md={2} mdOffset={1}>
+                        <Image src={AndrewHead} className="headshot" circle />
                     </Col>
-                    <Col xs={6} md={3}>
-                        <Image src={RobbieHead} className="headshot" circle />
+                    <Col xs={4} md={2} mdOffset={1}>
+                        <Image src={MitchellHead} className="headshot" circle />
                     </Col>
-                    <Col xs={6} md={3}>
-                        <Image src={RobbieHead} className="headshot" circle />
+                </Row>
+                <Row className="picrow">
+                    <Col xs={4} md={2} mdOffset={2}>
+                        <Image src={MariaHead} className="headshot" circle />
+                    </Col>
+                    <Col xs={4} md={2} mdOffset={1}>
+                        <Image src={HunterHead} className="headshot" circle />
+                    </Col>
+                    <Col xs={4} md={2} mdOffset={1}>
+                        <Image src={MaddieHead} className="headshot" circle />
                     </Col>
                 </Row>
             </Grid>
@@ -62,15 +75,15 @@ const LandingPage = () => (
             <h2 className="text-center">Contact Us</h2>
             <Grid>
                 <Row className="contactIcons text-center">
-                    <Col xs={6} md={2} mdOffset={3}>
+                    <Col xs={4} md={2} mdOffset={3}>
                         <FontAwesomeIcon icon={faFacebook} size="6x" onClick={() => window.open('https://www.facebook.com/GatorBitcoinClub/','mywindow')} style={{cursor: "pointer"}}/>
                         <br/>Facebook
                     </Col>
-                    <Col xs={6} md={2}>
+                    <Col xs={4} md={2}>
                         <FontAwesomeIcon icon={faYoutube} size="6x" onClick={() => window.open('https://www.youtube.com/channel/UCFylnoedjPlU4ueG28fttGA/videos/','mywindow')} style={{cursor: "pointer"}}/>
                         <br/>Youtube
                     </Col>
-                    <Col xs={6} md={2}>
+                    <Col xs={4} md={2}>
                         <FontAwesomeIcon icon={faEnvelope} size="6x" onClick={() => window.open('mailto:gatorbitcoinclub@gmail.com','mywindow')} style={{cursor: "pointer"}}/>
                         <br/>Email
                     </Col>

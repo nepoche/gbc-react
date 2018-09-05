@@ -1,7 +1,15 @@
-import React from 'react'
+import React, { Component } from 'react'
 
-const AdminPage = () => (
-    <h2>Admin Page</h2>
-)
+class AdminPage extends Component {
+
+    render() {
+
+        return (
+            <div>
+                
+            </div>
+        )
+    }
+}
 
 export default AdminPage;

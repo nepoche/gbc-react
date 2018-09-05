@@ -4,18 +4,17 @@ import { withRouter } from 'react-router-dom'
 import { store } from '../../store'
 import LoginForm from './LoginForm';
 import SignupLink from '../../components/SignupLink'
-import { LoadingContainer } from 'drizzle-react-components'
 import { drizzleConnect } from 'drizzle-react'
+import { LoadingContainer } from 'drizzle-react-components';
 
 class LoginPage extends Component {
 
     render() {
 
         const state = store.getState();
-
         console.log(state);
 
-        if (state.login !== "") {
+        if (state.user != null) {
             return (
                 <Redirect to="/dashboard" />
             )
@@ -23,10 +22,10 @@ class LoginPage extends Component {
 
         return (
             <div>
-                <LoadingContainer>
-                    <LoginForm history={this.props.history} />
-                </LoadingContainer>
+                <LoginForm history={this.props.history} />
                 <SignupLink />
+                <LoadingContainer>
+                </LoadingContainer>
             </div>
         )
 

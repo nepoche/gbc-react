@@ -1,8 +1,13 @@
 .signupField {
     max-width: 500px;
-    justify-content: center;
+    text-align: center;
+    margin: 0 auto;
 }
 
 .signupButton {
     max-width: 100px;
+}
+
+.error {
+    color: red;
 }

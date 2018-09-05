@@ -5,7 +5,7 @@ import submit from './submit';
 import './LoginForm.css';
 
 let LoginForm = props => {
-    const { history, handleSubmit, submitting } = props;
+    const { handleSubmit, submitting } = props;
 
     return (
         <form onSubmit={handleSubmit(submit)} >
