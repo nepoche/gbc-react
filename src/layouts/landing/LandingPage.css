@@ -76,8 +76,10 @@
 
 @media (max-width: 992px) {
     .big-container {
-        display: none;
-        
+        display: none;   
+    }
+    .iframe {
+        margin-right: 10px;
     }
 }
   

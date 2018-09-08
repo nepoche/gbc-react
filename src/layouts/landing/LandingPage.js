@@ -30,7 +30,8 @@ const LandingPage = () => (
         <div className="banner">
             <Jumbotron>
                 <h1 className="text-center">The Gator Blockchain Club First Meeting</h1>
-                <p className="text-center">September 5th, at 6pm. <br /> Stuzin Hall, Room 104 </p>
+                <div className="text-center">September 5th, at 6pm.</div>
+                <div className="text-center">Stuzin Hall, Room 104 </div>
                 <Countdown date={`2018-09-12T18:00:00`} />
             </Jumbotron>
         </div>
@@ -41,14 +42,14 @@ const LandingPage = () => (
                         <Iframe url="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3467.3783948793225!2d-82.34339338421185!3d29.650792182027256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e8a3837298720d%3A0x12f45a830cb6382d!2sStuzin+Hall!5e0!3m2!1sen!2sus!4v1507538142089"
                                 className="responsive-iframe-container"
                                 height="100%"
-                                width="100%"
+                                width="95%"
                         />
                     </Col>
                     <Col md={6} style={{height: "50vh", marginTop: "20px"}}>
                         <Iframe url="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ufbitcoin%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FNew_York"
                                 className="small-container"
                                 height="100%"
-                                width="100%"
+                                width="95%"
                         />
                     </Col>
                 </Row>
@@ -68,16 +69,12 @@ const LandingPage = () => (
                     <Col className="clubMission" md={6} xs={12}>
                         <h2 className="text-center">Our Mission</h2>
                         <p>
-                            The Gator Blockchain Club seeks to inform and promote academic interest on the topic
-                            of blockchain and related technologies.
-                            <br/><br/>
-                            We realize our mission through our goals:
-                            <br/><br/>
-                            (1) Establish a community of like minds interested in blockchain technology.
-                            <br/>
-                            (2) Help others to understand the technology.
-                            <br />
-                            (3) Help students get jobs in the field.
+                            <span>The Gator Blockchain Club seeks to inform and promote academic interest on the topic
+                            of blockchain and related technologies.</span>
+                            <div style={{paddingTop: "10px"}}>We realize our mission through our goals:</div>
+                            <div style={{paddingTop: "10px"}}>(1) Establish a community of like minds interested in blockchain technology. </div>
+                            <div>(2) Help others to understand the technology.</div>
+                            <div>(3) Help students get jobs in the field.</div>
                         </p>
                     </Col>
                 </Row>
@@ -147,19 +144,19 @@ const LandingPage = () => (
             <h2 className="text-center" style={{paddingTop: "30px"}}>Our Partners</h2>
             <Grid>
                 <Row>
-                    <Col xs={2} xsOffset={1}>
+                    <Col md={2} mdOffset={1} xs={4}>
                         <Image src={benPartner} className="partner" onClick={() => window.open('blockchainedu.org','mywindow')} style={{cursor: "pointer"}}/>
                     </Col>
-                    <Col xs={2} >
+                    <Col md={2} xs={4}>
                         <Image src={bloqPartner} className="partner" onClick={() => window.open('bloq.com','mywindow')} style={{cursor: "pointer"}}/>
                     </Col>
-                    <Col xs={2} >
+                    <Col md={2} xs={4}>
                         <Image src={chamberPartner} className="partner" onClick={() => window.open('digitalchamber.org','mywindow')} style={{cursor: "pointer"}}/>
                     </Col>
-                    <Col xs={2} >
+                    <Col md={2} xs={4} xsOffset={2} mdOffset={0}>
                         <Image src={consensysPartner} className="partner" onClick={() => window.open('new.consensys.net','mywindow')} style={{cursor: "pointer"}}/>
                     </Col>
-                    <Col xs={2} >
+                    <Col md={2} xs={4}>
                         <Image src={bitcoinPartner} className="partner" onClick={() => window.open('bitcoin.com','mywindow')} style={{cursor: "pointer"}}/>
                     </Col>
                 </Row>
