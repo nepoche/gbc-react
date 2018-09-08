@@ -8,8 +8,6 @@ import { faFacebook, faYoutube } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import './LandingPage.css'
 
-import ufBackground from '../../../public/images/UF-background.jpg'
-
 import RobbieHead from '../../../public/images/headshots/Robbie.jpg'
 import JacobHead from '../../../public/images/headshots/Jacob.jpg'
 import KyleHead from '../../../public/images/headshots/Kyle.jpg'
