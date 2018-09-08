@@ -2,17 +2,46 @@
     width: 200px;
 }
 
-.exec {
-    
-}
-
 .picrow {
     margin-top: 30px;
     margin-bottom: 15px;
 }
 
+.name {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.gbctitle {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.jumbotron {
+    background-image: url("../../../public/images/UF-background.jpg");
+    background-position: center center;
+    color: white;
+}
+
 .banner {
     margin-bottom: -15px;
+}
+
+.maps {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.fa-facebook {
+    color:blue;
+}
+
+.fa-youtube {
+    color: red;
+}
+
+.fa-envelope {
+    color: black;
 }
 
 .centerCol {
@@ -23,3 +52,38 @@
     margin-top: 50px;
     margin-bottom: 50px;
 }
+
+.Countdown {
+    margin: 10px auto;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.Countdown-col {
+    display: inline-block;
+}
+
+.Countdown-col-element {
+    display: inline-block;
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.Countdown-col-element strong {
+    font-size: 50px;
+}
+
+@media (max-width: 992px) {
+    .big-container {
+        display: none;
+        
+    }
+}
+  
+@media (min-width: 992px) {
+    .small-container {
+        display: none;
+    }
+}
+  

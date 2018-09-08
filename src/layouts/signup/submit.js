@@ -1,13 +1,9 @@
 import { auth, db } from '../../firebase';
 import { SubmissionError } from 'redux-form';
 import store from '../../store';
-import { userLoggedIn } from '../../actions';
+import { fbUserExists } from '../../actions';
 
 function submit(values) {
-
-    if (values.account.length !== 42) {
-        throw new SubmissionError({ account: 'Invalid Ethereum Address', _error: 'Signup Failed' });
-    }
 
     // if (!/^\S+@\ufl.edu$/.test(values.email)) {
     //     throw new SubmissionError({ email: 'You need a ufl email to sign into the application'});
@@ -23,8 +19,8 @@ function submit(values) {
 
     return auth.doCreateUserWithEmailAndPassword(values.email, values.password1)
             .then((authUser) => {
-                db.doCreateUser(authUser.user.uid, values.email, values.account)
-                store.dispatch(userLoggedIn(values.email));
+                db.doCreateUser(authUser.user.uid, values.email)
+                store.dispatch(fbUserExists(authUser));
             })
             .catch(error => {
                 console.log(error);

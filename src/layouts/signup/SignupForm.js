@@ -20,9 +20,6 @@ let SignupForm = props => {
     return (
         <form onSubmit={handleSubmit(submit)} className="row">
             <div className="col-xs-6 col-xs-offset-3">
-                <Field name="account" component={renderField} type="text" label="Ethereum Account"/>
-            </div>
-            <div className="col-xs-6 col-xs-offset-3">
                 <Field name="email" component={renderField} type="text" label="Email"/>
             </div>
             <div className="col-xs-6 col-xs-offset-3">
