@@ -145,19 +145,19 @@ const LandingPage = () => (
             <Grid>
                 <Row>
                     <Col md={2} mdOffset={1} xs={4}>
-                        <Image src={benPartner} className="partner" onClick={() => window.open('blockchainedu.org','mywindow')} style={{cursor: "pointer"}}/>
+                        <Image src={benPartner} className="partner" onClick={() => window.open('https://blockchainedu.org','mywindow')} style={{cursor: "pointer"}}/>
                     </Col>
                     <Col md={2} xs={4}>
-                        <Image src={bloqPartner} className="partner" onClick={() => window.open('bloq.com','mywindow')} style={{cursor: "pointer"}}/>
+                        <Image src={bloqPartner} className="partner" onClick={() => window.open('https://bloq.com','mywindow')} style={{cursor: "pointer"}}/>
                     </Col>
                     <Col md={2} xs={4}>
-                        <Image src={chamberPartner} className="partner" onClick={() => window.open('digitalchamber.org','mywindow')} style={{cursor: "pointer"}}/>
+                        <Image src={chamberPartner} className="partner" onClick={() => window.open('https://digitalchamber.org','mywindow')} style={{cursor: "pointer"}}/>
                     </Col>
                     <Col md={2} xs={4} xsOffset={2} mdOffset={0}>
-                        <Image src={consensysPartner} className="partner" onClick={() => window.open('new.consensys.net','mywindow')} style={{cursor: "pointer"}}/>
+                        <Image src={consensysPartner} className="partner" onClick={() => window.open('https://new.consensys.net','mywindow')} style={{cursor: "pointer"}}/>
                     </Col>
                     <Col md={2} xs={4}>
-                        <Image src={bitcoinPartner} className="partner" onClick={() => window.open('bitcoin.com','mywindow')} style={{cursor: "pointer"}}/>
+                        <Image src={bitcoinPartner} className="partner" onClick={() => window.open('https://bitcoin.com','mywindow')} style={{cursor: "pointer"}}/>
                     </Col>
                 </Row>
             </Grid>
