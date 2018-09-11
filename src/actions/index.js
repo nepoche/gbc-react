@@ -1,18 +1,55 @@
-import { LOGIN_USER, LOGOUT_USER, FB_USER_EXISTS } from '../constants/action-types'
+import {
+    SIGNUP_USER_REQUEST,
+    SIGNUP_USER_SUCCESS,
+    SIGNUP_USER_FAILURE,
+    LOGIN_USER_REQUEST,
+    LOGIN_USER_SUCCESS,
+    LOGIN_USER_FAILURE,
+    LOGOUT_USER,
+} from '../constants/action-types'
 
-const userLoggedIn = (email) => ({
-    type: LOGIN_USER,
-    payload: email
-});
-
-const userLoggedOut = () => ({
-    type: LOGOUT_USER,
-    payload: ""
+const signupUserSuccess = (user) => ({
+    type: SIGNUP_USER_SUCCESS,
+    payload: {
+        ...user
+    }
 })
 
-const fbUserExists = (user) => ({
-    type: FB_USER_EXISTS,
-    payload: user
+const signupUserRequest = () => ({
+    type: SIGNUP_USER_REQUEST,
+})
+
+const signupUserFailure = (error) => ({
+    type: SIGNUP_USER_FAILURE,
+    payload: error
+})
+
+const loginUserSuccess = (user) => ({
+    type: LOGIN_USER_SUCCESS,
+    payload: {
+        ...user
+    }
 });
 
-export { userLoggedIn, userLoggedOut, fbUserExists }
+const loginUserRequest = () => ({
+    type: LOGIN_USER_REQUEST,
+})
+
+const loginUserFailure = (error) => ({
+    type: LOGIN_USER_FAILURE,
+    payload: error
+})
+
+const logoutUser = () => ({
+    type: LOGOUT_USER
+})
+
+export {
+    signupUserRequest,
+    signupUserSuccess,
+    signupUserFailure,
+    loginUserRequest,
+    loginUserSuccess,
+    loginUserFailure,
+    logoutUser,
+}

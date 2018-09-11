@@ -18,6 +18,7 @@ class NavigationBar extends Component {
     render() {
 
         const state = store.getState();
+        console.log(state);
 
         return (
                 // <Link className="navbar-brand" to="/"><img className="logo" src={logo} alt="club logo"/></Link>
@@ -37,30 +38,30 @@ class NavigationBar extends Component {
                         <NavItem eventKey={1}>
                             <Link to="/">Home</Link>
                         </NavItem>
-                        { !state.user && 
+                        { !state.user.user && 
                             <NavItem eventKey={2}>
                                 <Link to="/signup">Sign Up</Link>
                             </NavItem>
                         }
-                        { !state.user &&
+                        { !state.user.user &&
                             <NavItem eventKey={3}>
                                 <Link to="/login">Login</Link>
                             </NavItem>
                         }
                         {
-                            state.user &&
+                            state.user.user &&
                             <NavItem eventKey={4}>
                                 <Link to="/dashboard">Dashboard</Link>
                             </NavItem>
                         }
                         {
-                            state.user &&
+                            state.user.user &&
                             <NavItem eventKey={5}>
                                 <Link to="/account">Account</Link>
                             </NavItem>
                         }
                         {
-                            state.user &&
+                            state.user.user &&
                             <NavItem eventKey={6}>
                                 <button style={{marginBottom: "0px"}} onClick={this.handleLogout}>Log out</button>
                             </NavItem>

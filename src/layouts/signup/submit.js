@@ -1,9 +1,9 @@
 import { auth, db } from '../../firebase';
 import { SubmissionError } from 'redux-form';
 import store from '../../store';
-import { fbUserExists } from '../../actions';
+import { loginUserRequest, loginUserSuccess, loginUserFailure } from '../../actions';
 
-function submit(values) {
+export default function submit(values) {
 
     // if (!/^\S+@\ufl.edu$/.test(values.email)) {
     //     throw new SubmissionError({ email: 'You need a ufl email to sign into the application'});
@@ -17,16 +17,16 @@ function submit(values) {
         throw new SubmissionError({ password2: 'The passwords must match'})
     }
 
-    return auth.doCreateUserWithEmailAndPassword(values.email, values.password1)
-            .then((authUser) => {
-                db.doCreateUser(authUser.user.uid, values.email)
-                store.dispatch(fbUserExists(authUser));
-            })
-            .catch(error => {
-                console.log(error);
-                throw new SubmissionError({ _error: 'A user has already registered with that email'});
-            });
+    store.dispatch(loginUserRequest);
 
+    auth.doCreateUserWithEmailAndPassword(values.email, values.password1)
+        .then((authUser) => {
+            db.doCreateUser(authUser.user.uid, values.email)
+            store.dispatch(loginUserSuccess);
+        })
+        .catch(error => {
+            console.log(error);
+            store.dispatch(loginUserFailure);
+            throw new SubmissionError({ _error: 'A user has already registered with that email'});
+        });
 }
-
-export default submit;

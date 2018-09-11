@@ -5,16 +5,13 @@ import { store } from '../../store'
 import LoginForm from './LoginForm';
 import SignupLink from '../../components/SignupLink'
 import { drizzleConnect } from 'drizzle-react'
-import { LoadingContainer } from 'drizzle-react-components';
+import { loginUserSuccess } from '../../actions'
 
 class LoginPage extends Component {
 
     render() {
 
-        const state = store.getState();
-        console.log(state);
-
-        if (state.user != null) {
+        if (this.props.user != null) {
             return (
                 <Redirect to="/dashboard" />
             )
@@ -24,17 +21,15 @@ class LoginPage extends Component {
             <div>
                 <LoginForm history={this.props.history} />
                 <SignupLink />
-                <LoadingContainer>
-                </LoadingContainer>
             </div>
         )
-
     }
 }
 
 const mapStateToProps = state => {
     return {
-        accounts: state.accounts
+        accounts: state.accounts,
+        user: state.user,
     }
 }
 

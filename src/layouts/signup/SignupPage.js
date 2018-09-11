@@ -29,7 +29,8 @@ class SignupPage extends Component {
 
 const mapStateToProps = state => {
     return {
-        accounts: state.accounts
+        accounts: state.accounts,
+        
     }
 }
 
