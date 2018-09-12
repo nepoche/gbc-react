@@ -1,7 +1,7 @@
 import { auth, db } from '../../firebase';
 import { SubmissionError } from 'redux-form';
-import store from '../../store';
-import { loginUserRequest, loginUserSuccess, loginUserFailure } from '../../actions';
+import store, { history } from '../../store';
+import { loginUserRequest, loginUserFailure } from '../../actions';
 
 export default function submit(values) {
 
@@ -21,8 +21,15 @@ export default function submit(values) {
 
     auth.doCreateUserWithEmailAndPassword(values.email, values.password1)
         .then((authUser) => {
-            db.doCreateUser(authUser.user.uid, values.email)
-            store.dispatch(loginUserSuccess);
+            db.doCreateUser(authUser.user.uid, values.email);
+            authUser.user.sendEmailVerification()
+                .then(function() {
+                    window.alert('Thank you for signing up, Please verify your email and then log in');
+                    history.push("/");
+                })
+                .catch(function(error) {
+                    console.log(error);
+                });
         })
         .catch(error => {
             console.log(error);

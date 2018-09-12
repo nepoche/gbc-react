@@ -1,21 +1,12 @@
 import React, { Component } from 'react'
-import { Redirect } from 'react-router'
-import { withRouter } from 'react-router-dom'
-import store from '../../store'
-import SignupForm from './SignupForm';
 import { drizzleConnect } from 'drizzle-react'
+import { withRouter } from 'react-router-dom'
+import SignupForm from './SignupForm';
+import NoLogin from '../../containers/NoLogin';
 
 class SignupPage extends Component {
     
     render () {
-
-        const state = store.getState();
-
-        if (state.user) {
-            return (
-                <Redirect to="/dashboard" />
-            );
-        }
 
         return (
             <div>
@@ -27,11 +18,11 @@ class SignupPage extends Component {
     }
 }
 
-const mapStateToProps = state => {
+function mapStateToProps(state) {
     return {
         accounts: state.accounts,
-        
-    }
+        user: state.user
+    };
 }
 
-export default withRouter(drizzleConnect(SignupPage, mapStateToProps));
+export default withRouter(NoLogin(drizzleConnect(SignupPage, mapStateToProps)));

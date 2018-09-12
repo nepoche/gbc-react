@@ -1,11 +1,9 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router'
 import { withRouter } from 'react-router-dom'
-import { store } from '../../store'
 import LoginForm from './LoginForm';
 import SignupLink from '../../components/SignupLink'
 import { drizzleConnect } from 'drizzle-react'
-import { loginUserSuccess } from '../../actions'
 
 class LoginPage extends Component {
 

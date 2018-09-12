@@ -1,5 +1,3 @@
-import GBAttendance from '../build/contracts/GBAttendance.json'
-
 const drizzleOptions = {
   web3: {
     block: false,
@@ -9,10 +7,10 @@ const drizzleOptions = {
     }
   },
   contracts: [
-    GBAttendance
+    
   ],
   events: {
-    SimpleStorage: ['StorageSet']
+    
   },
   polls: {
     accounts: 1500
