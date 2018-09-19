@@ -29,10 +29,10 @@ const LandingPage = () => (
     <div className="page">
         <div className="banner">
             <Jumbotron>
-                <h1 className="text-center">The Gator Blockchain Club First Meeting</h1>
-                <div className="text-center">September 5th, at 6pm.</div>
+                <h1 className="text-center">First GBM with Live Transaction Demo</h1>
+                <div className="text-center">September 19th, at 6pm.</div>
                 <div className="text-center">Stuzin Hall, Room 104 </div>
-                <Countdown date={`2018-09-12T18:00:00`} />
+                <Countdown date={`2018-09-19T18:00:00`} />
             </Jumbotron>
         </div>
         <div className="maps">
