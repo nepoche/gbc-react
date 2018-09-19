@@ -46,7 +46,7 @@ const LandingPage = () => (
                         />
                     </Col>
                     <Col md={6} style={{height: "50vh", marginTop: "20px"}}>
-                        <Iframe url="https://calendar.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=ufbitcoin%40gmail.com&amp;color=%231B887A&amp;ctz=America%2FNew_York"
+                        <Iframe url="https://calendar.google.com/calendar/embed?src=hiv95t71ircf8k5m6mtukqcrkc%40group.calendar.google.com&ctz=America%2FNew_York"
                                 className="small-container"
                                 height="100%"
                                 width="95%"
