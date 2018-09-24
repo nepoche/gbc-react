@@ -32,7 +32,7 @@ const LandingPage = () => (
                 <h1 className="text-center">First GBM with Live Transaction Demo</h1>
                 <div className="text-center">September 19th, at 6pm.</div>
                 <div className="text-center">Stuzin Hall, Room 104 </div>
-                <Countdown date={`2018-09-19T18:00:00`} />
+                <Countdown date={`2018-10-03T18:00:00`} />
             </Jumbotron>
         </div>
         <div className="maps">
