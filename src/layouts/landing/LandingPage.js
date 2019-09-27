@@ -9,6 +9,7 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import './LandingPage.css'
 
 import RobbieHead from '../../../public/images/headshots/Robbie.jpg'
+import AntonioHead from '../../../public/images/headshots/Antonio.jpg'
 import JacobHead from '../../../public/images/headshots/Jacob.jpg'
 import KyleHead from '../../../public/images/headshots/Kyle.jpg'
 import FelipeHead from '../../../public/images/headshots/Felipe.jpg'
@@ -29,10 +30,10 @@ const LandingPage = () => (
     <div className="page">
         <div className="banner">
             <Jumbotron>
-                <h1 className="text-center">Third GBM</h1>
-                <div className="text-center">October 3rd, at 6pm.</div>
-                <div className="text-center">Stuzin Hall, Room 104 </div>
-                <Countdown date={`2018-10-03T18:00:00`} />
+                <h1 className="text-center">Meetings Stuzin 102</h1>
+                <div className="text-center">Tuesdays</div>
+                <div className="text-center">6pm - 8pm</div>
+                <Countdown date={`2019-10-01T18:00:00`} />
             </Jumbotron>
         </div>
         <div className="maps">
@@ -85,59 +86,24 @@ const LandingPage = () => (
             <Grid>
                 <Row className="picrow">
                     <Col xs={4} md={2} mdOffset={2}>
-                        <Image src={RobbieHead} className="headshot" circle />
-                        <h4 className="name">Robbie Klages</h4>
+                        <Image src={AntonioHead} className="headshot" circle />
+                        <h4 className="name">Antonio Gomes</h4>
                         <p className="gbctitle">President</p>
                     </Col>
                     <Col xs={4} md={2} mdOffset={1}>
-                        <Image src={JacobHead} className="headshot" circle />
-                        <h4 className="name">Jacob Frank</h4>
-                        <p className="gbctitle">Vice-President</p>
+                        <Image src={RobbieHead} className="headshot" circle />
+                        <h4 className="name">Robbie Klages</h4>
+                        <p className="gbctitle">Vice President</p>
                     </Col>
-                    <Col xs={4} md={2} mdOffset={1}>
-                        <Image src={KyleHead} className="headshot" circle />
-                        <h4 className="name">Kyle Rooker</h4>
-                        <p className="gbctitle">Treasurer</p>
-                    </Col>
-                </Row>
-                <Row className="picrow">
-                    <Col xs={4} md={2} mdOffset={2}>
-                        <Image src={FelipeHead} className="headshot" circle />
-                        <h4 className="name">Felipe Faria</h4>
-                        <p className="gbctitle">Event Coordinator</p>
-                    </Col>
-                    <Col xs={4} md={2} mdOffset={1}>
-                        <Image src={AndrewHead} className="headshot" circle />
-                        <h4 className="name">Andrew Cavanaugh</h4>
-                        <p className="gbctitle">Digital Media Manager</p>
-                    </Col>
-                    <Col xs={4} md={2} mdOffset={1}>
-                        <Image src={MitchellHead} className="headshot" circle />
-                        <h4 className="name">Mitchell Goldenberg</h4>
-                        <p className="gbctitle">Group Coordinator</p>
-                    </Col>
-                </Row>
-                <Row className="picrow">
                     <Col xs={4} md={2} mdOffset={2}>
                         <Image src={MariaHead} className="headshot" circle />
                         <h4 className="name">Maria Petryk</h4>
                         <p className="gbctitle">Director of Marketing</p>
                     </Col>
-                    <Col xs={4} md={2} mdOffset={1}>
-                        <Image src={HunterHead} className="headshot" circle />
-                        <h4 className="name">Hunter Masin</h4>
-                        <p className="gbctitle">Policy and Law Affairs</p>
-                    </Col>
-                    <Col xs={4} md={2} mdOffset={1}>
-                        <Image src={MaddieHead} className="headshot" circle />
-                        <h4 className="name">Maddie Atkins</h4>
-                        <p className="gbctitle">Networking Director</p>
-                    </Col>
                 </Row>
             </Grid>
             <div className="text-center" style={{paddingTop: "20px"}}>
                 <h5>These volunteer students currently help run and organize the <strong>Gator Blockchain Club</strong></h5>
-                <Link to="/signup"><Button>Join Us!</Button></Link>
             </div>
         </div>
         <div className="partners">
@@ -167,7 +133,7 @@ const LandingPage = () => (
             <Grid>
                 <Row className="contactIcons text-center">
                     <Col xs={4} md={2} mdOffset={3}>
-                        <FontAwesomeIcon icon={faFacebook} size="6x" onClick={() => window.open('https://www.facebook.com/GatorBitcoinClub/','mywindow')} style={{cursor: "pointer"}}/>
+                        <FontAwesomeIcon icon={faFacebook} size="6x" onClick={() => window.open('https://www.facebook.com/GatorBlockchain/','mywindow')} style={{cursor: "pointer"}}/>
                         <p>Facebook</p>
                     </Col>
                     <Col xs={4} md={2}>
