@@ -141,7 +141,7 @@ const LandingPage = () => (
                         <p>Youtube</p>
                     </Col>
                     <Col xs={4} md={2}>
-                        <FontAwesomeIcon icon={faEnvelope} size="6x" onClick={() => window.open('mailto:us@gatorblockchainclub.com','mywindow')} style={{cursor: "pointer"}}/>
+                        <FontAwesomeIcon icon={faEnvelope} size="6x" onClick={() => window.open('mailto:ufbitcoin@gmail.com','mywindow')} style={{cursor: "pointer"}}/>
                         <p>Email</p>
                     </Col>
                 </Row>
