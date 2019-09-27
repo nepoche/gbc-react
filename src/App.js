@@ -16,18 +16,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {/* <NavigationBar /> */}
+        <NavigationBar />
 
         <Route exact path="/" component={LandingPage} />
-        <Route exact path="/dashboard" component={DashboardPage} />
-        <Route exact path="/signup" component={SignupPage} />
-        <Route exact path="/account" component={AccountPage} />
-        <Route exact path="/forgot" component={ForgotPage} />
-        <Route exact path="/admin" component={AdminPage} />
         <Route exact path="/contact" component={ContactPage} />
         <Route exact path="/club" component={ClubPage} />
         <Route exact path="/partners" component={PartnersPage} />
-        <Route exact path="/login" component={LoginPage} />
       </div>
     );
   }

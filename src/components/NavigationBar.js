@@ -33,7 +33,7 @@ class NavigationBar extends Component {
                     <Link to="/"><img className="logo" src={logo} alt="club logo"/></Link>
                     <Navbar.Toggle />
                 </Navbar.Header>
-                <Navbar.Collapse>
+                {/* <Navbar.Collapse>
                     <Nav pullRight>
                         <NavItem eventKey={1}>
                             <Link to="/">Home</Link>
@@ -67,7 +67,7 @@ class NavigationBar extends Component {
                             </NavItem>
                         }
                     </Nav>
-                </Navbar.Collapse>
+                </Navbar.Collapse> */}
             </Navbar>
         );
     }

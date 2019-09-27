@@ -95,14 +95,14 @@ const LandingPage = () => (
                         <h4 className="name">Robbie Klages</h4>
                         <p className="gbctitle">Vice President</p>
                     </Col>
-                    <Col xs={4} md={2} mdOffset={2}>
+                    <Col xs={4} md={2} mdOffset={1}>
                         <Image src={MariaHead} className="headshot" circle />
                         <h4 className="name">Maria Petryk</h4>
                         <p className="gbctitle">Director of Marketing</p>
                     </Col>
                 </Row>
             </Grid>
-            <div className="text-center" style={{paddingTop: "20px"}}>
+            <div className="text-center" style={{paddingTop: "20px", paddingBottom: "20px"}}>
                 <h5>These volunteer students currently help run and organize the <strong>Gator Blockchain Club</strong></h5>
             </div>
         </div>
